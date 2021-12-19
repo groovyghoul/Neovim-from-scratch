@@ -89,8 +89,12 @@ local mappings = {
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  --["f"] = {
+  --  "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = file_previewer})<cr>",
+  --  "Find files",
+  --},
   ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "<cmd>Telescope find_files<cr>",
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
@@ -180,6 +184,22 @@ local mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  },
+
+  d = {
+    name = "Debug",
+    d = { "<cmd>call vimspector#Launch()<cr>", "Launch" },
+    c = { "<cmd>call GotoWindow(g:vimspector_session_windows.code)<cr>", "View Code" },
+    v = { "<cmd>call GotoWindow(g:vimspector_session_windows.variables)<cr>", "View Variables" },
+    e = { "<cmd>call vimspector#Reset()<cr>", "Reset" },
+    l = { "<Plug>VimspectorStepInfo", "Step Info" },
+    j = { "<Plug>VimspectorStepOver", "Step Over" },
+    k = { "<Plug>VimspectorStepOut", "Step Out" },
+    b = { 
+      name = "Breakpoint",
+      t = { "<Plug>VimspectorToggleBreakpoint", "Breakpoint" },
+      c = { "<Plug>VimspectorToggleConditionalBreakpoint", "Conditional Breakpoint" },
+    },
   },
 }
 
