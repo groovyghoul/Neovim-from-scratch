@@ -5,7 +5,7 @@
 Make sure to remove or move your current `nvim` directory
 
 ```
-git clone git@github.com:ChristianChiarulli/Neovim-from-scratch.git ~/.config/nvim
+git clone git@github.com:groovyghoul/Neovim-from-scratch.git ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed 
@@ -58,7 +58,3 @@ Next we need to install python support (node is optional)
 
 
 ---
-
-> The computing scientist's main challenge is not to get confused by the complexities of his own making. 
-
-\- Edsger W. Dijkstra
