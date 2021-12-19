@@ -8,7 +8,7 @@ Make sure to remove or move your current `nvim` directory
 
 **IMPORTANT** requires `Neovim 0.6 release` version
 ```
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+git clone git@github.com:groovyghoul/Neovim-from-scratch.git ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed 
@@ -60,6 +60,3 @@ Next we need to install python support (node is optional)
 
 **NOTE** make sure you have [node](https://nodejs.org/en/) installed, I recommend a node manager like [fnm](https://github.com/Schniz/fnm).
 
-> The computing scientist's main challenge is not to get confused by the complexities of his own making. 
-
-\- Edsger W. Dijkstra
