@@ -12,6 +12,29 @@ telescope.setup {
     selection_caret = " ",
     path_display = { "smart" },
 
+    selection_strategy = "reset",
+    sorting_strategy = "ascending",
+    layout_strategy = "horizontal",
+    layout_config = {
+      width = 0.75,
+      preview_cutoff = 120,
+      prompt_position = "top",
+      horizontal = {
+        mirror = false,
+      },
+      vertical = {
+        mirror = false,
+      },
+    },
+
+    color_devicons = true,
+    use_less = true,
+    set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
+    file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
+    grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
+    qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+    buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
+
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
