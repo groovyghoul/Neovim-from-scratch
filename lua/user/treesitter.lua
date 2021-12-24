@@ -21,3 +21,6 @@ configs.setup {
     enable_autocmd = false,
   },
 }
+
+require 'nvim-treesitter.install'.compilers = { "clang" }
+
