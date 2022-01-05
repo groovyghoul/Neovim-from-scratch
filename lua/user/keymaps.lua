@@ -68,3 +68,20 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Paste in visual mode without copying
+-- xnoremap - remap only in visual mode
+-- p - Paste
+-- gv - Reselect last selection (not the one that you currently on, but the original)
+-- y - copy it (last selection)
+keymap("x", "p", "pgvy", opts)
+keymap("x", "P", "Pgvy", opts)
+
+-- Prevent x from overriding what's in the clipboard.
+keymap("x", "x", "_x", opts)
+keymap("x", "X", "_x", opts)
+
+-- Keep cursor at the bottom of the visual selection after you yank it.
+keymap("v", "y", "ygv<ESC>", opts)
+
+-- yank to end of line
+keymap("n", "Y", "y$", opts)
