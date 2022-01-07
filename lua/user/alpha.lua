@@ -16,13 +16,19 @@ dashboard.section.header.val = {
  	[[       |___/                                       ]],
 }
 
+-- this allows the config directory to be set up for either Linux or Windows
+-- Windows --> ~/AppData/Local/nvim/
+-- Linux   --> ~/.config/nvim/
+local cfgdir = vim.fn.stdpath('config') .. '/init.lua'
+
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
 	dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
+	dashboard.button("c", "  Configuration", ":e " .. cfgdir .. "<CR>"),
+	-- dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
 	dashboard.button("w", "  Windows Config", ":e ~/AppData/Local/nvim/init.lua <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
