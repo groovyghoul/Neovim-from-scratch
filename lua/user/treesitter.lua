@@ -22,5 +22,6 @@ configs.setup {
   },
 }
 
-require 'nvim-treesitter.install'.compilers = { "clang" }
+-- try clang first (probably Windows) and fall back to gcc (WSL and Linux)
+require 'nvim-treesitter.install'.compilers = { "clang", "gcc" }
 
