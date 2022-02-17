@@ -47,3 +47,6 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 -- Neovide silly settings
 vim.g["neovide_cursor_vfx_mode"] = "torpedo"
+
+vim.g["python3_host_prog"] = "python"
+
