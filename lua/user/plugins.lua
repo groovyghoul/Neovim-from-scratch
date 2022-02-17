@@ -113,6 +113,9 @@ return packer.startup(function(use)
     end
   }
 
+  -- startup diagnostics (can be commented out when not in use)
+  use "dstein64/vim-startuptime"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
