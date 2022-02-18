@@ -85,3 +85,16 @@ keymap("v", "y", "ygv<ESC>", opts)
 
 -- yank to end of line
 keymap("n", "Y", "y$", opts)
+
+-- system yank/paste instead of using unnamedplus option
+-- Copy to clipboard
+keymap("v", "<leader>y", '"+y', opts)
+keymap("n", "<leader>Y", '"+yg_', opts)
+keymap("n", "<leader>y", '"+y', opts)
+keymap("n", "<leader>yy", '"+yy', opts)
+
+-- Paste from clipboard
+keymap("n", "<leader>p", '"+p', opts)
+keymap("n", "<leader>P", '"+P', opts)
+keymap("v", "<leader>p", '"+p', opts)
+keymap("v", "<leader>P", '"+P', opts)
