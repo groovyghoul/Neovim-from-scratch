@@ -163,6 +163,7 @@ local mappings = {
       "Workspace Symbols",
     },
   },
+
   s = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
@@ -201,6 +202,13 @@ local mappings = {
       t = { "<Plug>VimspectorToggleBreakpoint", "Breakpoint" },
       c = { "<Plug>VimspectorToggleConditionalBreakpoint", "Conditional Breakpoint" },
     },
+  },
+
+  x = {
+    name = "Trouble",
+    c = { "<cmd>TroubleClose<cr>", "Close" },
+    x = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostics" },
+    w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
   },
 }
 
