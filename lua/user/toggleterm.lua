@@ -68,3 +68,9 @@ local python = Terminal:new({ cmd = "python", hidden = true })
 function _PYTHON_TOGGLE()
 	python:toggle()
 end
+
+local powershell = Terminal:new({ cmd = "pwsh", hidden = true })
+
+function _POWERSHELL_TOGGLE()
+	powershell:toggle()
+end
