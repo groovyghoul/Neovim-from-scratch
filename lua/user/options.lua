@@ -50,3 +50,4 @@ vim.g["neovide_cursor_vfx_mode"] = "torpedo"
 
 vim.g["python3_host_prog"] = "python"
 
+vim.g.vimspector_enable_mappings = "HUMAN"
