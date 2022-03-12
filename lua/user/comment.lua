@@ -19,4 +19,11 @@ comment.setup {
       location = location,
     }
   end,
+  opleader = {
+    line = "gc",
+    block = "gb",
+  },
+  mappings = {
+    basic = true,
+  },
 }
