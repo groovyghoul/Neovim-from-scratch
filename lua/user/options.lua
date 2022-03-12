@@ -50,4 +50,8 @@ vim.g["neovide_cursor_vfx_mode"] = "torpedo"
 
 vim.g["python3_host_prog"] = "python"
 
+-- Copilot wouldn't work with tab, so the following configuration is used instead to map completion to ctrl-shift-j
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
 vim.g.vimspector_enable_mappings = "HUMAN"

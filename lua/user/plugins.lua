@@ -126,6 +126,8 @@ use {
     end
   }
 
+  use "github/copilot.vim"
+
   -- startup diagnostics (can be commented out when not in use)
   use "dstein64/vim-startuptime"
 
