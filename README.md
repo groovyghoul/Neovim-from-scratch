@@ -1,14 +1,19 @@
-# Neovim from scratch
-
-Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
+# Neovim dotfiles
 
 ## Try out this config
 
 Make sure to remove or move your current `nvim` directory
 
-**IMPORTANT** Requires [Neovim v0.6.0](https://github.com/neovim/neovim/releases/tag/v0.6.0) or [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
+**IMPORTANT** Requires [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
+
+Linux or WSL
 ```
 git clone git@github.com:groovyghoul/Neovim-from-scratch.git ~/.config/nvim
+```
+
+Windows
+```
+git clone git@github.com:groovyghoul/Neovim-from-scratch.git ~/AppData/Local/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed 
