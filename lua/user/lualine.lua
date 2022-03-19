@@ -69,7 +69,8 @@ lualine.setup({
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
-		always_divide_middle = true,
+        always_divide_middle = true,
+        globalstatus = 3,
 	},
 	sections = {
 		lualine_a = { branch, diagnostics },
