@@ -84,6 +84,9 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "OmniSharp/omnisharp-vim"
 
+  -- tagbar
+  use 'simrat39/symbols-outline.nvim'
+
 use {
   "folke/trouble.nvim",
   requires = "kyazdani42/nvim-web-devicons",
