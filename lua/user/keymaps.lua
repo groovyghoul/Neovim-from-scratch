@@ -40,7 +40,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to enter
+-- Press jj or jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "jj", "<ESC>", opts)
 
@@ -98,3 +98,6 @@ keymap("n", "<leader>p", '"+p', opts)
 keymap("n", "<leader>P", '"+P', opts)
 keymap("v", "<leader>p", '"+p', opts)
 keymap("v", "<leader>P", '"+P', opts)
+
+-- Symbols Outline (net really working for some reason)
+keymap("n", "A-\\", ":SymbolsOutline<CR>", opts)
