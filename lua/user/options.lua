@@ -82,3 +82,20 @@ vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 vim.g.vimspector_enable_mappings = "HUMAN"
+
+-- lua config
+-- https://stackoverflow.com/questions/36108950/setting-up-powershell-as-vims-shell-command-does-not-seem-to-be-passed-correct
+if (vim.loop.os_uname().sysname == 'Windows_NT') then
+  vim.cmd([[
+    set shell=pwsh
+    set shellcmdflag=-command
+    set shellquote=\"
+    set shellxquote=
+  ]])
+end
+
+		-- let &shell = has('win32') ? 'powershell' : 'pwsh'
+		-- let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
+		-- let &shellredir = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+		-- let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+		-- set shellquote= shellxquote=
