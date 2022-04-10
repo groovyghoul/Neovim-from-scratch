@@ -85,6 +85,7 @@ vim.g.vimspector_enable_mappings = "HUMAN"
 
 -- lua config
 -- https://stackoverflow.com/questions/36108950/setting-up-powershell-as-vims-shell-command-does-not-seem-to-be-passed-correct
+-- https://githubhot.com/repo/akinsho/nvim-toggleterm.lua/issues/90
 if (vim.loop.os_uname().sysname == 'Windows_NT') then
   vim.cmd([[
     set shell=pwsh
