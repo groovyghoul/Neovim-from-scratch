@@ -72,10 +72,7 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
--- Neovide silly settings
-vim.g["neovide_cursor_vfx_mode"] = "torpedo"
-
-vim.g["python3_host_prog"] = "python"
+vim.g.python3_host_prog = "python"
 
 -- Copilot wouldn't work with tab, so the following configuration is used instead to map completion to ctrl-shift-j
 vim.g.copilot_no_tab_map = true
