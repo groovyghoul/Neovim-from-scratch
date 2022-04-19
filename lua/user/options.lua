@@ -1,6 +1,6 @@
 local options = {
   backup = false,                          -- creates a backup file
-  clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
+  --clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
@@ -97,3 +97,33 @@ end
 		-- let &shellredir = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
 		-- let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
 		-- set shellquote= shellxquote=
+
+-- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#show-line-diagnostics-automatically-in-hover-window
+-- if this becomes obnoxious and I just want the line level diags back, set config.virtual_text = true in lua/handlers.lua
+vim.o.updatetime = 250
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
+--vim.g.Omnisharp_highlighting = false
+vim.cmd "let g:OmniSharp_highlighting = 0"
+
+-- vim.cmd([[
+-- let g:OmniSharp_highlight_groups = {
+-- \ 'ExcludedCode': 'NonText',
+-- \ 'ClassName': 'Typedef',
+-- \ 'StructName': 'Typedef',
+-- \ 'DelegateName': 'Structure',
+-- \ 'EnumName': 'Structure',
+-- \ 'InterfaceName': 'Structure',
+-- \ 'ModuleName': 'Structure',
+-- \ 'NamespaceName': 'Include',
+-- \ 'RegexComment': 'Comment',
+-- \ 'RegexCharacterClass': 'Character',
+-- \ 'RegexAnchor': 'Type',
+-- \ 'RegexQuantifier': 'Number',
+-- \ 'RegexGrouping': 'Macro',
+-- \ 'RegexAlternation': 'Identifier',
+-- \ 'RegexText': 'String',
+-- \ 'RegexSelfEscapedCharacter': 'Delimiter',
+-- \ 'RegexOtherEscape': 'Delimiter'
+-- \}
+-- ]])
