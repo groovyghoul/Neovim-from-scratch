@@ -103,6 +103,7 @@ end
 vim.o.updatetime = 250
 vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
+-- https://github.com/OmniSharp/omnisharp-vim/issues/677
 --vim.g.Omnisharp_highlighting = false
 vim.cmd "let g:OmniSharp_highlighting = 0"
 
