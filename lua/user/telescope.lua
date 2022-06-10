@@ -7,7 +7,9 @@ local actions = require "telescope.actions"
 
 telescope.setup {
   defaults = {
-
+    file_ignore_patterns = {
+      "obj", "bin"
+    },
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
