@@ -100,8 +100,9 @@ end
 
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#show-line-diagnostics-automatically-in-hover-window
 -- if this becomes obnoxious and I just want the line level diags back, set config.virtual_text = true in lua/handlers.lua
-vim.o.updatetime = 500    -- 250 was too in-my-face, trying 500 for a bit
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+-- if this is turned off, to show the diagnostics, type "gl"
+-- vim.o.updatetime = 500    -- 250 was too in-my-face, trying 500 for a bit
+-- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 -- https://github.com/OmniSharp/omnisharp-vim/issues/677
 --vim.g.Omnisharp_highlighting = false
