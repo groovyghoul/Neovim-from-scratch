@@ -101,3 +101,9 @@ keymap("v", "<leader>P", '"+P', opts)
 
 -- Symbols Outline (net really working for some reason)
 keymap("n", "A-\\", ":SymbolsOutline<CR>", opts)
+
+--keymap("i", "<C-k><C-k>", "<Cmd>call copilot#Accept('\\<CR>')<CR>", opts)
+keymap("i", "<C-a><C-a>", 'copilot#Accept("<CR>")', { expr = true, silent = true })
+
+-- create a function 
+-- create a function 
