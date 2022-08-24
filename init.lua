@@ -21,4 +21,4 @@ require "user.whichkey"
 require "user.symbolsoutline"
 require "user.autocommands"
 require "user.lspsignature"
-
+require "user.rust"

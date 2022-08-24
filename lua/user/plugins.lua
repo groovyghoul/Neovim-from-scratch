@@ -41,6 +41,7 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
+  use "lewis6991/impatient.nvim"
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
@@ -53,7 +54,6 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
-  use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
@@ -77,7 +77,10 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  --use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use 'williamboman/mason.nvim'    
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'simrat39/rust-tools.nvim'
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "OmniSharp/omnisharp-vim"
