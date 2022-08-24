@@ -75,7 +75,7 @@ vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 if (vim.loop.os_uname().sysname == 'Windows_NT') then
-  vim.g.python3_host_prog = "python3"
+  vim.g.python3_host_prog = "python"
 else
   -- IMPROVE NEOVIM STARTUP
   -- https://github.com/editorconfig/editorconfig-vim/issues/50
