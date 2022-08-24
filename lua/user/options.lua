@@ -61,6 +61,8 @@ for _, plugin in pairs(disabled_built_ins) do
     vim.g["loaded_" .. plugin] = 1
 end
 -- end disable the "built in" features
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0
 
 vim.opt.shortmess:append "c"
 
@@ -72,7 +74,22 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
-vim.g.python3_host_prog = "python"
+if (vim.loop.os_uname().sysname == 'Windows_NT') then
+  vim.g.python3_host_prog = "python3"
+else
+  -- IMPROVE NEOVIM STARTUP
+  -- https://github.com/editorconfig/editorconfig-vim/issues/50
+  vim.g.loaded_python_provier=1
+  vim.g.python_host_skip_check = 1
+  vim.g.python_host_prog='/bin/python2'
+  vim.g.python3_host_skip_check = 1
+  vim.g.python3_host_prog='/bin/python3'
+  vim.opt.pyxversion=3
+  -- if vim.fn.executable("editorconfig") then
+  --  vim.g.EditorConfig_exec_path = '/bin/editorconfig'
+  -- end
+  vim.g.EditorConfig_core_mode = 'external'
+end
 
 -- Copilot wouldn't work with tab, so the following configuration is used instead to map completion to ctrl-shift-j
 vim.g.copilot_no_tab_map = true
