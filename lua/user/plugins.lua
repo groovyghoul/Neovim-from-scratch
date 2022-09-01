@@ -120,6 +120,9 @@ use {
   use "puremourning/vimspector"
   use "szw/vim-maximizer"
 
+  -- Harpoon
+  use 'ThePrimeagen/harpoon'
+  
   use {
     'rcarriga/nvim-notify',
     config = function ()
