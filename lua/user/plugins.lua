@@ -107,6 +107,7 @@ use {
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter/playground",
     run = ":TSUpdate",
   }
   use "nvim-treesitter/nvim-tree-docs"
