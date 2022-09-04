@@ -2,7 +2,7 @@
 
 Make sure to remove or move your current `nvim` directory
 
-**IMPORTANT** Requires [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
+**IMPORTANT** Requires [0.7+](https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-download). 
 
 Linux or WSL
 ```
